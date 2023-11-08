@@ -1,3 +1,2 @@
 # trabalho-tweb
-trabalho tweb 2023-2024
-Opção escolhida: 6
+##Opção escolhida: 6
