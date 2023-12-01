@@ -3,3 +3,23 @@
     margin: 0;
     padding: 0;
   }*//*# sourceMappingURL=estilos.css.map */
+  main .data{
+    display: flex;
+    flex-direction: row;
+  }
+  main .read{
+    display: flex;
+    flex-direction: row;
+  }
+  main .drc{
+    display: flex;
+    flex-direction: row;
+  }
+  main .more{
+    display: flex;
+    flex-direction: row;
+  }
+  footer .ftr{
+    display: flex;
+    flex-direction: row;
+  }
