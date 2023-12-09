@@ -41,6 +41,11 @@ header{
   padding: .5rem;
 }
 
+#logo{
+  height: auto;
+  width: 60px;
+}
+
 #site-name{
   padding: 0 0 0 10px;
   margin: 0 0 0 11px;
@@ -49,7 +54,17 @@ header{
   flex: 1 0 auto;
 }
 
-#logo{
+#nav-links li{
+  display: inline-block;
+  padding: 0 20px;
+}
+
+#search, #menu{
   height: auto;
-  width: 60px;
+  width: 30px;
+  padding: .5rem;
+}
+
+#picture1 img{
+  width: 100%;
 }
