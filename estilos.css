@@ -1,5 +1,5 @@
-main{
-  font-family: 'source sans 3', 'Calibri', 'sans-serif';
+* {
+  font-family: "source sans 3", "Calibri", "sans-serif";
   font-size: 15px;
   line-height: 1.5;
 }
@@ -27,4 +27,29 @@ main .more {
 footer .ftr {
   display: flex;
   flex-direction: row;
+}
+
+li, a {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: auto;
+  padding: 0.5rem;
+}
+
+#site-name {
+  padding: 0 0 0 10px;
+  margin: 0 0 0 11px;
+  border-left: 1px solid;
+  font-size: 1rem;
+  flex: 1 0 auto;
+}
+
+#logo {
+  height: auto;
+  width: 60px;
 }/*# sourceMappingURL=estilos.css.map */
