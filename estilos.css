@@ -39,6 +39,7 @@ header {
   align-items: center;
   flex: auto;
   padding: 0.5rem;
+  font-weight: bold;
 }
 
 #logo {
