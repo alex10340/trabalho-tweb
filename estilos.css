@@ -59,9 +59,16 @@ header {
   filter: invert(100%); /* Inverte a cor da imagem para branco */
 }
 
+#nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 #nav-links li {
-  display: inline-block;
-  padding: 0 20px;
+  margin-left: 20px;
 }
 
 #search, #menu {
