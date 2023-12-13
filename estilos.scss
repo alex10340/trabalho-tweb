@@ -69,10 +69,17 @@ header{
 #nav-links li {
   margin-left: 20px;}
 
-#search, #menu{
+#search{
   height: auto;
   width: 25px;
-  padding: .5rem;
+  padding-left: 10px;
+}
+
+#menu{
+  height: auto;
+  width: 25px;
+  padding: 5px;
+  margin: auto;
 }
 
 #picture1 img{
