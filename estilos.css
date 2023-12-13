@@ -1,33 +1,9 @@
+@charset "UTF-8";
 * {
   font-family: "source sans 3", "Calibri", "sans-serif";
   font-size: 15px;
   line-height: 1.5;
   margin: 0;
-}
-
-main .data {
-  display: flex;
-  flex-direction: row;
-}
-
-main .read {
-  display: flex;
-  flex-direction: row;
-}
-
-main .drc {
-  display: flex;
-  flex-direction: row;
-}
-
-main .more {
-  display: flex;
-  flex-direction: row;
-}
-
-footer .ftr {
-  display: flex;
-  flex-direction: row;
 }
 
 li, a {
@@ -67,12 +43,20 @@ header {
 }
 
 #donateButton {
+  display: flex;
+  align-items: center;
   background-color: #af161e;
   color: white;
   font-weight: bold;
   border: none;
   border-radius: 5px;
   padding: 12px 27px;
+}
+
+.heart-icon {
+  width: 20px; /* Defina o tamanho da imagem do coração conforme necessário */
+  margin-right: 5px; /* Ajuste o espaçamento entre a imagem e o texto se necessário */
+  filter: invert(100%); /* Inverte a cor da imagem para branco */
 }
 
 #nav-links li {
