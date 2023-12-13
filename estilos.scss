@@ -58,7 +58,13 @@ header{
   line-height: 28px;
   font-size: 1.1em;
   flex: 1 0 auto;
+  font-weight: normal;
 }
+#donate{
+  display: flex;
+  flex-direction: row;
+}
+
 
 #nav-links li{
   display: inline-block;
