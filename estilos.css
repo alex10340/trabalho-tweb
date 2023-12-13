@@ -46,15 +46,18 @@ header {
 #logo {
   height: auto;
   width: 50px;
+  display: flex;
+  margin-left: 8px;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(82%) saturate(7359%) hue-rotate(359deg) brightness(64%) contrast(120%);
 }
 
 #site-name {
   padding: 0 0 0 10px;
   margin: 0 0 0 11px;
   border-left: 1px solid;
-  font-size: 1rem;
+  line-height: 28px;
+  font-size: 1.1em;
   flex: 1 0 auto;
-  font-weight: normal;
 }
 
 #nav-links li {
