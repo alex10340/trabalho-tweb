@@ -50,7 +50,7 @@ header{
   font-weight: bold;
   border: none;
   border-radius: 5px;
-  padding: 12px 27px;
+  padding: 11px 20px;
 }
 
 .heart-icon {
@@ -84,4 +84,9 @@ header{
   display: grid;
   gap: 50px;
   
+}
+#search, #menu {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Para centralizar o ícone verticalmente */
 }
