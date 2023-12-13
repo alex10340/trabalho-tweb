@@ -63,10 +63,15 @@ header {
 
 #search, #menu {
   height: auto;
-  width: 30px;
+  width: 25px;
   padding: 0.5rem;
 }
 
 #picture1 img {
   width: 100%;
+}
+
+.read {
+  display: grid;
+  gap: 50px;
 }/*# sourceMappingURL=estilos.css.map */
