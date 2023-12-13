@@ -28,3 +28,9 @@
 					<li><a href="https://pro.drc.ngo/about-us/strategic-framework/">Strategic framework</a></li>
 					<li><a href="https://pro.drc.ngo/about-us/contact/">Contact</a></li>
 				</ul>
+
+				<li><a href="https://pro.drc.ngo/where-we-work/">Where we work</a></li>
+			<li><a href="https://pro.drc.ngo/what-we-do/">What we do</a></li>
+			<li><a href="https://pro.drc.ngo/resources/">Resources</a></li>
+			<li><a href="https://pro.drc.ngo/about-us/">About us</a></li>
+			<li id="Donate"><button>Donate</button></div></li>
