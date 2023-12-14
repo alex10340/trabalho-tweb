@@ -97,3 +97,8 @@ header{
   align-items: center;
   justify-content: center; /* Para centralizar o ícone verticalmente */
 }
+.data{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
