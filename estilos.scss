@@ -54,9 +54,9 @@ header{
 }
 
 .heart-icon {
-  width: 20px; /* Defina o tamanho da imagem do coração conforme necessário */
-  margin-right: 5px; /* Ajuste o espaçamento entre a imagem e o texto se necessário */
-  filter: invert(100%); /* Inverte a cor da imagem para branco */
+  width: 20px; 
+  margin-right: 5px; 
+  filter: invert(100%); 
 }
 
 #nav-links {
@@ -86,32 +86,43 @@ header{
   width: 100%;
   filter: brightness(70%);
 }
-
-.read{
-  display: grid;
-  gap: 50px;
-  
-}
 #search, #menu {
   display: flex;
   align-items: center;
-  justify-content: center; /* Para centralizar o ícone verticalmente */
+  justify-content: center; 
 }
 .data{
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+
 }
 .read{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px;
+  max-width: 100%;
+  margin: 20px auto;
+ 
   
 }
 .drc{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+ 
 }
 .more{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px; 
+  max-width: 100%;
+  margin: 20px auto; 
+}
+.read img,
+,
+.more img {
+  max-width: 100%;
+  height: auto; }
+.drc img{
+  height: 70px;
 }
