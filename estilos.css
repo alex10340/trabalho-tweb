@@ -104,4 +104,19 @@ header {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.read {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.drc {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.more {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }/*# sourceMappingURL=estilos.css.map */
