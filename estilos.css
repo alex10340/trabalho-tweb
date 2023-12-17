@@ -78,6 +78,7 @@ header {
 #donateButton:hover {
   transition: 250ms;
   background-color: #fc2b32;
+  cursor: pointer;
 }
 #donateButton:hover .heart-icon {
   transform: scale(1.2);
@@ -111,6 +112,7 @@ header {
 #nav-links li:hover {
   color: #af161e;
   transition: 250ms;
+  cursor: pointer;
 }
 
 #search {
@@ -131,6 +133,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .data {

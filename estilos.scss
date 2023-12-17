@@ -85,6 +85,7 @@ header{
 #donateButton:hover{
   transition: $fast;
   background-color: #fc2b32;
+  cursor: pointer;
   .heart-icon{
     transform: scale(1.2);
     transition: $fast;
@@ -119,6 +120,7 @@ header{
 #nav-links li:hover {
   color: #af161e;
   transition: $fast;
+  cursor: pointer;
 }
 
 #search{
@@ -139,6 +141,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: center; 
+  cursor: pointer;
 }
 .data{
   display: grid;
