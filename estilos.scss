@@ -1,5 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;900&display=swap');
 
+$pulsing: pulse 10s ease-in-out 0s infinite alternate both running;
+$fast: 250ms;
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 
 * {
   font-family: 'Source Sans 3', 'sans-serif';
@@ -30,7 +41,14 @@ header{
   width: 50px;
   display: flex;
   margin-left: 8px;
+  transition: $fast;
   filter: brightness(0) saturate(100%) invert(20%) sepia(82%) saturate(7359%) hue-rotate(359deg) brightness(64%) contrast(120%);
+
+}
+
+#logo:hover{
+  transition: $fast;
+  filter: brightness(0) saturate(100%) invert(38%) sepia(40%) saturate(6626%) hue-rotate(336deg) brightness(92%) contrast(116%);
 }
 
 #site-name{
@@ -51,12 +69,26 @@ header{
 #donateButton {
   display: flex;
   align-items: center;
-  background-color: #af161e;
   color: white;
   font-weight: bold;
   border: none;
   border-radius: 5px;
   padding: 11px 20px;
+  transition: $fast;
+  background-color: #af161e;
+  .heart-icon{
+    transform: scale(1);
+    transition: $fast;
+  }
+}
+
+#donateButton:hover{
+  transition: $fast;
+  background-color: #fc2b32;
+  .heart-icon{
+    transform: scale(1.2);
+    transition: $fast;
+  }
 }
 
 .heart-icon {
@@ -64,6 +96,7 @@ header{
   margin-right: 5px; 
   filter: invert(100%); 
 }
+
 
 #nav-links {
   background-color: white;
@@ -79,7 +112,13 @@ header{
   font-size: 17px;
   padding-left: 9px;
   padding-right: 9px;
+  color: black;
+  transition: $fast;
+}
 
+#nav-links li:hover {
+  color: #af161e;
+  transition: $fast;
 }
 
 #search{
@@ -159,16 +198,31 @@ h2{
   font-size: 1.6rem;
   letter-spacing: .05em;
   line-height: 36px;
+  transition: 1000ms;
 }
+
+article:hover{
+  h2{
+    transition: 1000ms;
+    letter-spacing: .2em;
+  }
+}
+
 
 main{
   background-color: white;
   display: block;
 }
 
+#picture1{
+  overflow: hidden;
+}
+
 #picture1 img{
   width: 100%;
+  max-width: 100%;
   filter: brightness(70%);
+  animation: $pulsing;
 }
 
 #dots{
@@ -182,5 +236,5 @@ main{
   bottom: 0;
   background-image: url(media/design-frieze.svg);
   background-size: cover;
-  z-index: 1000;
+  z-index: 999;
 }
