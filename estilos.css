@@ -149,6 +149,8 @@ header {
   line-height: 27px;
   padding: 20px;
   border-color: gray;
+  display: flex;
+  align-items: flex-start;
 }
 
 #news {

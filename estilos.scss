@@ -149,13 +149,17 @@ header{
   grid-template-columns: 1fr 1fr 1fr;
   width: 90%;
   margin: 40px;
+
 }
-.data1{
+.data1 {
   border-left: 1px solid;
   line-height: 27px;
   padding: 20px;
   border-color: gray;
+  display: flex;
+  align-items: flex-start; 
 }
+
 #news{
   font-size: 30px;
   font-weight: bold;
