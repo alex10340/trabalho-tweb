@@ -147,8 +147,32 @@ header{
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-
+  width: 90%;
+  margin: 40px;
 }
+.data1{
+  border-left: 1px solid;
+  line-height: 27px;
+  padding: 20px;
+  border-color: gray;
+}
+#news{
+  display: flex;
+  justify-content: flex-start;
+  margin: 40px;
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+#view{
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px;
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+
 .read{
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
