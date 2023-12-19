@@ -242,6 +242,20 @@ header {
   margin-left: 30px;
   font-size: 27px;
   font-weight: bold;
+  line-height: 0.8cm;
+}
+
+.letter button {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 20px;
+  transition: 250ms;
+  background-color: #af161e;
 }
 
 .drc {
