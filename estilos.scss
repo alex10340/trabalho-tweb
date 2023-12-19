@@ -172,6 +172,34 @@ header{
   font-weight: 900;
   text-align: center;
 }
+#but1{
+  color: white;
+  width: 35px; /* Ajuste a largura conforme necessário */
+  height: 35px; /* Ajuste a altura conforme necessário */
+  border-radius: 50%;
+  transition: $fast;
+  background-color: #afafc1;
+  cursor: pointer;
+  .heart-icon{
+    transform: scale(1.2);
+    transition: $fast;
+   
+}
+}
+#but2{
+  color: white;
+  width: 35px; /* Ajuste a largura conforme necessário */
+  height: 35px; /* Ajuste a altura conforme necessário */
+  border-radius: 50%;
+  transition: $fast;
+  background-color: #afafc1;
+  cursor: pointer;
+  .heart-icon{
+    transform: scale(1.2);
+    transition: $fast;
+}
+
+}
 
 .read{
   display: grid;

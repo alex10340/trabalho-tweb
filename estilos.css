@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;900&display=swap");
 @keyframes pulse {
   0% {
@@ -167,6 +168,34 @@ header {
   font-size: 2rem;
   font-weight: 900;
   text-align: center;
+}
+
+#but1 {
+  color: white;
+  width: 35px; /* Ajuste a largura conforme necessário */
+  height: 35px; /* Ajuste a altura conforme necessário */
+  border-radius: 50%;
+  transition: 250ms;
+  background-color: #afafc1;
+  cursor: pointer;
+}
+#but1 .heart-icon {
+  transform: scale(1.2);
+  transition: 250ms;
+}
+
+#but2 {
+  color: white;
+  width: 35px; /* Ajuste a largura conforme necessário */
+  height: 35px; /* Ajuste a altura conforme necessário */
+  border-radius: 50%;
+  transition: 250ms;
+  background-color: #afafc1;
+  cursor: pointer;
+}
+#but2 .heart-icon {
+  transform: scale(1.2);
+  transition: 250ms;
 }
 
 .read {
