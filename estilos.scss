@@ -221,14 +221,31 @@ color: gray;
 
 }
 
-.read{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 10px;
-  max-width: 80%;
-  margin: 20px auto;
-  
-  
+.read {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap; 
+  margin-top: -10px;
+}
+
+.read-img {
+  flex-basis: 29%; 
+  margin-bottom: 0; 
+  margin-right: 0.7%; 
+}
+.read-img:first-child{
+  margin-left: 10px;
+}
+
+.read-img img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+.letter{
+  margin-left: 30px;
+  font-size:27px ;
+  font-weight: bold;
 }
 .drc{
   display: grid;
