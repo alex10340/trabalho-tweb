@@ -165,9 +165,10 @@ header{
   flex-direction: column;
 }
 .data2{
-font-size: 13px;
-font-weight: normal;
-color: gray;
+  font-size: 13px;
+  font-weight: normal;
+  color: gray;
+  line-height: 23px;
 }
 
 #news{
@@ -250,7 +251,7 @@ color: gray;
 
 .read-img img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   margin-bottom: 15px;
   object-fit: cover;
 }
