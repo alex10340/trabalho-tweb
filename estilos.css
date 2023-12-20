@@ -261,9 +261,11 @@ header {
 .drc {
   display: flex;
   justify-content: space-around;
-  margin-left: 7cm;
-  margin-right: 7cm;
+  margin-left: 10cm;
+  margin-right: 10cm;
   border: #fc2b32;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .drc-section {
@@ -274,6 +276,10 @@ header {
   max-width: 300px;
   padding: 0;
   justify-content: space-around;
+}
+.drc-section span {
+  font-size: 15px;
+  font-weight: 900;
 }
 
 .drc-section img {
