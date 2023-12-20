@@ -339,7 +339,7 @@ color: gray;
 
 #headerText{
   position: absolute;
-  top: 39.1%;
+  top: 336.5px;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -389,12 +389,13 @@ main{
 }
 
 #dots{
+  transform: none;
   display: block;
   margin-top: 2.35cm;
   height: 40px;
   width: 100%;
   position: absolute;
-  top: 67.4%;
+  top: 580.5px;
   left: 50%;
   transform: translate(-50%, -50%);
   bottom: 0;
