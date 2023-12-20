@@ -147,7 +147,8 @@ header {
 .data1 {
   border-left: 1px solid;
   line-height: 27px;
-  padding: 20px;
+  padding-left: 1rem;
+  padding-right: 2rem;
   border-color: gray;
   display: flex;
   align-items: flex-start;

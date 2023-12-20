@@ -154,7 +154,8 @@ header{
 .data1 {
   border-left: 1px solid;
   line-height: 27px;
-  padding: 20px;
+  padding-left: 1rem;
+  padding-right: 2rem;
   border-color: gray;
   display: flex;
   align-items: flex-start;
@@ -246,7 +247,7 @@ color: gray;
   margin-left: 30px;
   font-size:27px ;
   font-weight: bold;
- line-height: 0.8cm;
+  line-height: 0.8cm;
 }
 .letter button{
   margin-top: 20px;
