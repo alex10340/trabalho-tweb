@@ -339,7 +339,7 @@ color: gray;
 
 #headerText{
   position: absolute;
-  top: 40%;
+  top: 39.1%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -380,8 +380,10 @@ main{
 }
 
 #picture1 img{
+  display: block;
+  object-fit: cover;
   width: 100%;
-  max-width: 100%;
+  height: 689.6px;
   filter: brightness(70%);
   animation: $pulsing;
 }
@@ -392,7 +394,7 @@ main{
   height: 40px;
   width: 100%;
   position: absolute;
-  top: 79.4%;
+  top: 67.4%;
   left: 50%;
   transform: translate(-50%, -50%);
   bottom: 0;
