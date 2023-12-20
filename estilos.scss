@@ -241,8 +241,9 @@ color: gray;
 
 .read-img img {
   width: 100%;
-  height: auto;
+  height: 180px;
   margin-bottom: 15px;
+  object-fit: cover;
 }
 .letter{
   margin-left: 30px;

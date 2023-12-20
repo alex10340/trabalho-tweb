@@ -235,8 +235,10 @@ header {
 
 .read-img img {
   width: 100%;
-  height: auto;
+  height: 180px;
   margin-bottom: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .letter {
