@@ -342,31 +342,53 @@ main {
 }
 
 footer {
+  font-size: 10px;
+  letter-spacing: 0.05em;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0px;
+  border-top: 2px solid #F2F2F2;
 }
 footer li {
   display: inline;
-  font-size: 14px;
-  line-height: 20px;
+}
+
+#footerDiv {
+  display: flex;
+  order: 2;
+}
+
+#footerLinks li {
+  padding: 0.5em 1em;
+  color: black;
+}
+
+#footerLinks li:hover {
+  color: #af161e;
+  cursor: pointer;
 }
 
 #copyright {
-  font-size: 14px;
+  order: 1;
   line-height: 20px;
   padding: 1rem 2rem;
   text-align: center;
+  border-right: 1px solid;
 }
 
 #socials {
+  order: 3;
   display: flex;
-  height: -moz-fit-content;
-  height: fit-content;
   justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 24px;
 }
 #socials img {
-  padding: 10px;
+  padding: 6px;
+  width: 27px;
+}
+
+#socials:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=estilos.css.map */
