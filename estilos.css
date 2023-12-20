@@ -226,6 +226,7 @@ header {
   flex-basis: 29%;
   margin-bottom: 0;
   margin-right: 0.7%;
+  background-image: url(media/design-dots.svg);
 }
 
 .read-img:first-child {
@@ -274,6 +275,10 @@ header {
   max-width: 300px;
   padding: 0;
   justify-content: space-around;
+}
+.drc-section span {
+  font-size: 15px;
+  font-weight: 900;
 }
 
 .drc-section img {
