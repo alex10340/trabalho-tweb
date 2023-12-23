@@ -420,13 +420,16 @@ font-size: 18px;
   line-height: 0.8cm;
   font-size: 15px;
 }
-.globo .globo-img {
-display: flex;
+.globo-img{
+  margin-left: 8cm;
+  margin-right: 8cm;
+  
 }
-.globo-img .globo-img2{
-  margin-left: 5cm;
-  -ms-flex-align: center;
+.países{
+  text-align: center;
+  color: red;
 }
+
   footer{
   font-size: 10px;
   letter-spacing: .05em;
@@ -439,7 +442,7 @@ display: flex;
   li{
     display: inline;
   }
-}
+} 
 
 #footerDiv{
   display: flex;
