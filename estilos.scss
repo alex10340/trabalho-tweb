@@ -31,7 +31,7 @@ header{
   position: fixed;
   width: 100%;
   background-color: white;
-  z-index: 1000;
+  z-index: 300;
 }
 
 #logo{
@@ -566,4 +566,111 @@ footer{
   padding-top: 30px;
   padding-bottom: 12px;
   text-align: center;
+}
+
+#overlay {
+  display: none; //display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 500;
+}
+
+#paymentDisplay{
+  display: none; //display: block;
+  z-index: 1000;
+  position: absolute;
+  top: 340px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 550px;
+  //background-color: white;
+}
+
+#paymentDisplayTop{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 20px 0px;
+  color: white;
+  font-weight: 400;
+
+  button{
+    cursor: pointer;
+  }
+}
+
+#paymentDisplayTitle{
+  font-size: 19px;
+  padding: 20px;
+  border-bottom: 1px solid;
+  background-color: #af161e;
+  color: white;
+  font-weight: 400;
+}
+
+#presets{
+  display: flex;
+  justify-content: space-around;
+  color: black;
+  background-color: white;
+
+  button{
+    font-size: 20px;
+    font-weight: 300;
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px 40px;
+    border-radius: 5px;
+  }
+}
+
+#quantiaCustom{
+  background-color: white;
+  padding: 30px 30px;
+  display: flex;
+  justify-content: center;
+  
+  input{
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+#paymentSeguinte {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 40px;
+  transition: $fast;
+  background-color: #af161e;
+}
+
+#paymentSeguinte:hover{
+  transition: $fast;
+  background-color: #fc2b32;
+  cursor: pointer;
+}
+
+#arrow-right{
+  width: 22px; 
+  margin-left: 5px; 
+  filter: invert(100%); 
+}
+
+#nextButton{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
 }

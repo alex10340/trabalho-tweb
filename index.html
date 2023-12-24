@@ -10,6 +10,19 @@
 </head>
 
 <body>
+    <div id="overlay"></div>
+    <div id="paymentDisplay">
+        <div id="paymentDisplayTop">Apoie o nosso trabalho<button id="paymentDisplayClose">X</button></div>
+        <div id="paymentDisplayTitle">Escolha a quantia</div>
+        <div id="presets">
+            <div><button>20€</button></div>
+            <div><button>40€</button></div>
+            <div><button>60€</button></div>
+        </div>
+        <div id="quantiaCustom"><input type="text" placeholder="Introduza uma quantia à sua escolha" maxlength="9"></div>
+        <div id="nextButton"><button id="paymentSeguinte">Seguinte <img id="arrow-right" src="media/arrow-right.svg"></button></div>
+    </div>
+
     <header class="fixed">
         <div><a href="index.html"><img id="logo" src="media/drc-logo.svg" alt="DRC"></a></div>
         <div id="site-name">Professional</div>
@@ -155,6 +168,8 @@
             <img src="media/x.png" alt="X">
         </div>
     </footer>
+
+    <script type="text/javascript" src="logica.js"></script>
 </body>
 
 </html>
