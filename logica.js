@@ -117,10 +117,12 @@ seguinte.addEventListener('click',function(){
 
   if(quantia <= 0 || quantia==''){
     quantiaInválida.style.display='block'
+    tipoInvalido.style.display='none'
   }
   
   else if(doacaoUnica.checked == false && doacaoMensal.checked == false){
     tipoInvalido.style.display='block'
+    quantiaInválida.style.display='none'
   }
 
   else{
