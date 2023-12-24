@@ -455,7 +455,7 @@ footer {
   display: flex;
   align-items: center;
   padding: 0px;
-  border-top: 2px solid #F2F2F2;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 footer li {
   display: inline;
@@ -607,20 +607,24 @@ footer li {
   border-radius: 5px;
 }
 
-#quantiaCustom {
+.buttonSelected {
+  color: red;
+}
+
+#customAmount {
   background-color: white;
   padding: 30px 30px;
   display: flex;
   justify-content: center;
 }
-#quantiaCustom input {
+#customAmount input {
   width: 100%;
   padding: 20px;
   font-size: 20px;
   font-weight: 300;
 }
 
-#paymentSeguinte {
+#seguinte {
   display: flex;
   align-items: center;
   color: white;
@@ -633,7 +637,7 @@ footer li {
   background-color: #af161e;
 }
 
-#paymentSeguinte:hover {
+#seguinte:hover {
   transition: 250ms;
   background-color: #fc2b32;
   cursor: pointer;

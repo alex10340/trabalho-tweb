@@ -466,7 +466,8 @@ footer{
   display: flex;
   align-items: center;
   padding: 0px;
-  border-top: 2px solid #F2F2F2;
+  //border-top: 2px solid #F2F2F2;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
 
   li{
     display: inline;
@@ -629,7 +630,11 @@ footer{
   }
 }
 
-#quantiaCustom{
+.buttonSelected{
+  color: red;
+}
+
+#customAmount{
   background-color: white;
   padding: 30px 30px;
   display: flex;
@@ -641,9 +646,10 @@ footer{
     font-size: 20px;
     font-weight: 300;
   }
+
 }
 
-#paymentSeguinte {
+#seguinte {
   display: flex;
   align-items: center;
   color: white;
@@ -656,7 +662,7 @@ footer{
   background-color: #af161e;
 }
 
-#paymentSeguinte:hover{
+#seguinte:hover{
   transition: $fast;
   background-color: #fc2b32;
   cursor: pointer;

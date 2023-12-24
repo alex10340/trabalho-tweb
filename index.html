@@ -15,12 +15,12 @@
         <div id="paymentDisplayTop">Apoie o nosso trabalho<button id="paymentDisplayClose">X</button></div>
         <div id="paymentDisplayTitle">Escolha a quantia</div>
         <div id="presets">
-            <div><button>20€</button></div>
-            <div><button>40€</button></div>
-            <div><button>60€</button></div>
+            <div><button id="button20">20€</button></div>
+            <div><button id="button40">40€</button></div>
+            <div><button id="button80">80€</button></div>
         </div>
-        <div id="quantiaCustom"><input type="text" placeholder="Introduza uma quantia à sua escolha" maxlength="9"></div>
-        <div id="nextButton"><button id="paymentSeguinte">Seguinte <img id="arrow-right" src="media/arrow-right.svg"></button></div>
+        <div id="customAmount"><input id="customAmountInput" type="number" placeholder="Introduza uma quantia à sua escolha (€)" min="1" max="999999" step="any"></div>
+        <div id="nextButton"><button id="seguinte">Seguinte <img id="arrow-right" src="media/arrow-right.svg"></button></div>
     </div>
 
     <header class="fixed">
