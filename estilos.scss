@@ -649,6 +649,20 @@ footer{
 
 }
 
+#tipoDoacao{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+#quantiaInválida, #tipoInvalido{
+  padding-top: 20px;
+  display: none;
+  color: red;
+  background-color: white;
+  text-align: center;
+}
+
 #seguinte {
   display: flex;
   align-items: center;
