@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;900&display=swap");
 @keyframes pulse {
   0% {
@@ -163,19 +162,32 @@ header {
   font-size: 13px;
   font-weight: normal;
   color: gray;
+  line-height: 23px;
 }
 
 #news {
   font-size: 30px;
   font-weight: bold;
+  margin-bottom: -30px;
+}
+#news span {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-left: 0.15rem;
+  background: black;
 }
 
 #view {
+  padding-top: 10px;
+  padding-left: 30px;
   color: rgb(169, 58, 58);
   text-decoration: none;
   font-weight: 300;
   font-size: 1.25rem;
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 #news-view-container {
@@ -188,39 +200,23 @@ header {
   align-items: center;
 }
 
-#but1 {
+#but1, #but2 {
   color: white;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  transition: 250ms;
-  background-color: #afafc1;
+  background-color: #93a1ac;
+  font-weight: 400;
+  border: none;
   cursor: pointer;
-}
-#but1 .heart-icon {
-  transform: scale(1.2);
-  transition: 250ms;
-}
-
-#but2 {
-  color: white;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  transition: 250ms;
-  background-color: #afafc1;
-  cursor: pointer;
-}
-#but2 .heart-icon {
-  transform: scale(1.2);
-  transition: 250ms;
 }
 
 .read {
+  margin-top: 60px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  margin-top: -10px;
 }
 
 .read-img {
@@ -236,14 +232,13 @@ header {
 
 .read-img img {
   width: 100%;
-  height: 180px;
-  margin-bottom: 15px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .letter {
-  margin-left: 30px;
+  margin: 30px;
   font-size: 27px;
   font-weight: bold;
   line-height: 0.8cm;
@@ -314,14 +309,13 @@ header {
 
 .read-more img {
   width: 100%;
-  height: 180px;
-  margin-bottom: 15px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .letter2 {
-  margin-left: 30px;
+  margin: 30px;
   font-size: 27px;
   font-weight: bold;
   line-height: 0.8cm;
@@ -402,41 +396,59 @@ main {
   bottom: 0;
   background-image: url(media/design-frieze.svg);
   background-size: cover;
-  z-index: 999;
 }
 
-.globo {
-  text-align: left;
-  margin-left: 170px;
+#globoContainer {
+  padding: 30px 180px 30px 180px;
 }
 
-.globo .globo-work {
-  line-height: 0.4cm;
-  font-size: 18px;
+.globo-work {
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
 }
 
-.globo .globo-refugee {
-  line-height: 0.1cm;
-  font-size: 27px;
+.globo-refugee {
   font-weight: 900;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  margin-bottom: 0.5em;
 }
 
-.globo .globo-globe {
-  line-height: 0.8cm;
-  font-size: 15px;
+.globo-globe {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 1em;
 }
 
 .globo-img {
-  margin-left: 8cm;
-  margin-right: 8cm;
+  background-image: url(media/design-dots.svg);
+}
+.globo-img img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  height: 568.917px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: flex;
+  justify-content: center;
 }
 
-.países {
+.paises {
   text-align: center;
-  color: red;
+  color: #af161e;
+  font-weight: 900;
+  cursor: pointer;
+}
+.paises span {
+  color: black;
+  font-weight: 400;
 }
 
 footer {
+  margin-top: 60px;
   font-size: 10px;
   letter-spacing: 0.05em;
   box-sizing: border-box;
@@ -449,12 +461,14 @@ footer li {
   display: inline;
 }
 
-#footerDiv {
+#footerLinks {
   display: flex;
   order: 2;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-
 #footerLinks li {
+  font-size: 0.9rem;
   padding: 0.5em 1em;
   color: black;
 }
@@ -470,6 +484,7 @@ footer li {
   padding: 1rem 2rem;
   text-align: center;
   border-right: 1px solid;
+  font-size: 0.9rem;
 }
 
 #socials {
@@ -486,4 +501,50 @@ footer li {
 
 #socials:hover {
   cursor: pointer;
+}
+
+#charlotte {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+#caption {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+  line-height: 32px;
+  font-weight: 900;
+  color: #788A97;
+  max-width: 800px;
+}
+
+#bottomText {
+  display: flex;
+  justify-content: center;
+  color: #536975;
+  font-size: 1.1rem;
+  line-height: 25px;
+  font-weight: 300;
+}
+
+#charlotte img {
+  transform: scale(1.1);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+#aboutourwork {
+  letter-spacing: 0.1em;
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding-top: 30px;
+  padding-bottom: 12px;
+  text-align: center;
 }/*# sourceMappingURL=estilos.css.map */
