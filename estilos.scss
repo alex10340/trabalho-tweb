@@ -655,11 +655,70 @@ footer{
   background-color: white;
 }
 
-#quantiaInválida, #tipoInvalido{
+#particularEmpresa{
+  display: none; // display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding: 20px 0px;
+}
+
+#particularEmpresaText{
+  display: none; // display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  margin-top: -30px;
+  padding-bottom: 20px;
+  font-weight: 300;
+  font-size: 26px;
+}
+
+
+
+#quantiaInválida, #tipoInvalido, #particularInvalido{
   padding-top: 20px;
   display: none;
   color: red;
   background-color: white;
+  text-align: center;
+}
+
+#particularInvalido{
+  padding-top: 0px;
+}
+
+#informacoes{
+  display: none; // display: flex;
+  background-color: white;
+  justify-content: center;
+  flex-direction: column;
+
+  input, select{
+    margin: 15px;
+  }
+
+  span{
+    font-size: 22px;
+    font-weight: 300;
+    padding-left: 15px;
+  }
+}
+
+#morada{
+  display: none; // flex
+  justify-content: center;
+  flex-direction: column;
+
+  span{
+    font-size: 22px;
+    font-weight: 300;
+    padding-left: 15px;
+  }
+}
+
+#destino{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 

@@ -11,8 +11,27 @@ const seguinte = document.querySelector('#seguinte')
 const quantiaInválida = document.querySelector('#quantiaInválida')
 const tipoDoacao = document.querySelector('#tipoDoacao')
 const tipoInvalido = document.querySelector('#tipoInvalido')
-var doacaoUnica = document.querySelector('#doacaoUnica')
-var doacaoMensal = document.querySelector('#doacaoMensal')
+const doacaoUnica = document.querySelector('#doacaoUnica')
+const doacaoMensal = document.querySelector('#doacaoMensal')
+const particularEmpresa = document.querySelector('#particularEmpresa')
+const particularEmpresaText = document.querySelector('#particularEmpresaText')
+const particular = document.querySelector('#particular')
+const empresa = document.querySelector('#empresa')
+const particularInvalido = document.querySelector('#particularInvalido')
+const informacoes = document.querySelector('#informacoes')
+const email = document.querySelector('#email')
+const nome = document.querySelector('#nome')
+const apelido = document.querySelector('#apelido')
+const nif = document.querySelector('#nif')
+const morada = document.querySelector('#morada')
+
+
+
+doacaoUnica.checked=false
+doacaoMensal.checked=false
+particular.checked=false
+empresa.checked=false
+customAmountInput.value=''
 
 
 donateButton.addEventListener('click', function(){
@@ -23,6 +42,11 @@ donateButton.addEventListener('click', function(){
 paymentDisplayClose.addEventListener('click', function(){
   overlay.style.display='none'
   paymentDisplay.style.display='none'
+  doacaoUnica.checked=false
+  doacaoMensal.checked=false
+  particular.checked=false
+  empresa.checked=false
+  customAmountInput.value=''
 })
 
 
@@ -95,6 +119,33 @@ doacaoMensal.addEventListener('change',function(){
   }
 })
 
+var particularEmpresaSelect
+
+particular.addEventListener('change',function(){
+  if(particular.checked){
+    empresa.checked = false
+    particularEmpresaSelect = 'particular'
+    informacoes.style.display='flex'
+    apelido.style.display='block'
+  }
+  else{
+    informacoes.style.display='none'
+  }
+})
+
+empresa.addEventListener('change',function(){
+  if(empresa.checked){
+    particular.checked = false
+    particularEmpresaSelect = 'empresa'
+    informacoes.style.display='flex'
+    apelido.style.display='none'
+  }
+  else{
+    informacoes.style.display='none'
+  }
+})
+
+
 seguinte.addEventListener('click',function(){
   var quantia
 
@@ -134,7 +185,27 @@ seguinte.addEventListener('click',function(){
     button80.style.display='none'
     customAmountInput.style.display='none'
     paymentDisplayTitle.innerHTML='Informação'
-    
+    particularEmpresa.style.display='flex'
+    particularEmpresaText.style.display='flex'
+
+    if(tipoDoacaoSelect=='mensal'){
+      morada.style.display='flex'
+    }
+
+    seguinte.addEventListener('click', function(){
+      if(particular.checked == false && empresa.checked == false){
+        particularInvalido.style.display='block'
+      }
+      else{
+        particularInvalido.style.display='none'
+        console.log(particularEmpresaSelect)
+
+        particularEmpresa.style.display='none'
+        particularEmpresaText.style.display='none'
+        
+        
+      }
+    })
 
   }
 
