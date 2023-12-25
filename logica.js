@@ -126,13 +126,11 @@ doacaoMensal.addEventListener('change',function(){
   }
 })
 
-var particularEmpresaSelect
 
 particular.addEventListener('change',function(){
   errorBox.style.display='none'
   if(particular.checked){
     empresa.checked = false
-    particularEmpresaSelect = 'particular'
     informacoes.style.display='flex'
     apelido.style.display='block'
   }
@@ -145,7 +143,6 @@ empresa.addEventListener('change',function(){
   errorBox.style.display='none'
   if(empresa.checked){
     particular.checked = false
-    particularEmpresaSelect = 'empresa'
     informacoes.style.display='flex'
     apelido.style.display='none'
   }
@@ -234,8 +231,8 @@ seguinte.addEventListener('click',function(){
         }
       }    
       else{
+        errorBox.style.display='none'
         particularInvalido.style.display='none'
-        console.log(particularEmpresaSelect)
 
         particularEmpresa.style.display='none'
         particularEmpresaText.style.display='none'
