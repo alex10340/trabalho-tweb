@@ -8,6 +8,7 @@ const paymentDisplayClose = document.querySelector('#paymentDisplayClose')
 const button20 = document.querySelector('#button20')
 const button40 = document.querySelector('#button40')
 const button80 = document.querySelector('#button80')
+const customAmount = document.querySelector('#customAmount')
 const customAmountInput = document.querySelector('#customAmountInput')
 const seguinte = document.querySelector('#seguinte')
 const quantiaInválida = document.querySelector('#quantiaInválida')
@@ -236,7 +237,7 @@ seguinte.addEventListener('click',function(){
         paymentDisplayTitle.innerHTML='Pagamento'
         errorBox.style.display='none'
         particularInvalido.style.display='none'
-
+        customAmount.style.display='none'
         particularEmpresa.style.display='none'
         particularEmpresaText.style.display='none'
         informacoes.style.display='none'
