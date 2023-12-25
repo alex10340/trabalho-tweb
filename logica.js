@@ -1,3 +1,5 @@
+const precoRefeicao = 1.5
+
 const overlay = document.querySelector('#overlay')
 const donateButton = document.querySelector('#donateButton')
 const paymentDisplay = document.querySelector('#paymentDisplay')
@@ -28,8 +30,7 @@ const rua = document.querySelector('#rua')
 const cidade = document.querySelector('#cidade')
 const codigoPostal = document.querySelector('#codigoPostal')
 const pais = document.querySelector('#pais')
-
-
+const donationBox = document.querySelector('#donationBox')
 const errorBox = document.querySelector('#errorBox')
 
 
@@ -193,6 +194,7 @@ seguinte.addEventListener('click',function(){
     paymentDisplayTitle.innerHTML='Informação'
     particularEmpresa.style.display='flex'
     particularEmpresaText.style.display='flex'
+    
 
     if(tipoDoacaoSelect=='mensal'){
       morada.style.display='flex'
@@ -231,6 +233,7 @@ seguinte.addEventListener('click',function(){
         }
       }    
       else{
+        paymentDisplayTitle.innerHTML='Pagamento'
         errorBox.style.display='none'
         particularInvalido.style.display='none'
 
@@ -238,7 +241,14 @@ seguinte.addEventListener('click',function(){
         particularEmpresaText.style.display='none'
         informacoes.style.display='none'
         
-        
+        donationBox.style.display='flex'
+
+        let numRefeicoes = Math.trunc(quantia / precoRefeicao)
+        console.log(Math.trunc(numRefeicoes))
+
+        if(tipoDoacaoSelect=='unica'){
+          donationBox.innerHTML='O seu donativo permitirá fornecer aproximadamente ' + numRefeicoes +' refeições'
+        }
         
       }
     })

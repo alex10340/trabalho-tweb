@@ -723,4 +723,16 @@ footer li {
   justify-content: center;
   background-color: white;
   padding: 20px;
+}
+
+#donationBox {
+  display: none;
+  justify-content: center;
+  background-color: white;
+  text-align: center;
+  color: #af161e;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 30px;
+  padding-bottom: 10px;
 }/*# sourceMappingURL=estilos.css.map */
