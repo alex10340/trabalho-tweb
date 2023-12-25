@@ -24,6 +24,13 @@ const nome = document.querySelector('#nome')
 const apelido = document.querySelector('#apelido')
 const nif = document.querySelector('#nif')
 const morada = document.querySelector('#morada')
+const rua = document.querySelector('#rua')
+const cidade = document.querySelector('#cidade')
+const codigoPostal = document.querySelector('#codigoPostal')
+const pais = document.querySelector('#pais')
+
+
+const errorBox = document.querySelector('#errorBox')
 
 
 
@@ -122,6 +129,7 @@ doacaoMensal.addEventListener('change',function(){
 var particularEmpresaSelect
 
 particular.addEventListener('change',function(){
+  errorBox.style.display='none'
   if(particular.checked){
     empresa.checked = false
     particularEmpresaSelect = 'particular'
@@ -134,6 +142,7 @@ particular.addEventListener('change',function(){
 })
 
 empresa.addEventListener('change',function(){
+  errorBox.style.display='none'
   if(empresa.checked){
     particular.checked = false
     particularEmpresaSelect = 'empresa'
@@ -193,15 +202,45 @@ seguinte.addEventListener('click',function(){
     }
 
     seguinte.addEventListener('click', function(){
+      errorBox.style.display='block'
+
       if(particular.checked == false && empresa.checked == false){
         particularInvalido.style.display='block'
       }
+      else if(email.value==''){
+        errorBox.innerHTML='Email inválido!'
+      }
+      else if(nome.value==''){
+        errorBox.innerHTML='Nome inválido!'
+      }
+      else if(apelido.value=='' && apelido.style.display!='none'){
+        errorBox.innerHTML='Apelido inválido!'
+      }
+      else if(nif.value==''){
+        errorBox.innerHTML='NIF inválido!'
+      }
+      else if(morada.style.display=='flex'){
+        if(rua.value==''){
+          errorBox.innerHTML='Rua inválida!'
+        }
+        if(cidade.value==''){
+          errorBox.innerHTML='Cidade inválida!'
+        }
+        if(codigoPostal.value==''){
+          errorBox.innerHTML='Código postal inválido!'
+        }
+        if(pais.value==''){
+          errorBox.innerHTML='País inválido!'
+        }
+      }    
       else{
         particularInvalido.style.display='none'
         console.log(particularEmpresaSelect)
 
         particularEmpresa.style.display='none'
         particularEmpresaText.style.display='none'
+        informacoes.style.display='none'
+        
         
         
       }
