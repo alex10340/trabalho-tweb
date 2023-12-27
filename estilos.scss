@@ -254,6 +254,7 @@ header{
   font-weight: bold;
   line-height: 0.8cm;
 }
+
 .letter button{
   margin-top: 20px;
   display: flex;
@@ -263,9 +264,10 @@ header{
   border: none;
   border-radius: 5px;
   padding: 11px 20px;
-  transition: $fast;
-  background-color: #af161e;  
+  background-color: #af161e;
+  cursor: pointer;
 }
+
 .drc {
   display: flex;
   justify-content: space-around;
@@ -336,8 +338,8 @@ header{
   border: none;
   border-radius: 5px;
   padding: 11px 20px;
-  transition: $fast;
-  background-color: #af161e;  
+  background-color: #af161e;
+  cursor: pointer;
 }
 
 #headerText{

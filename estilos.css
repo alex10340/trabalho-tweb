@@ -254,8 +254,8 @@ header {
   border: none;
   border-radius: 5px;
   padding: 11px 20px;
-  transition: 250ms;
   background-color: #af161e;
+  cursor: pointer;
 }
 
 .drc {
@@ -331,8 +331,8 @@ header {
   border: none;
   border-radius: 5px;
   padding: 11px 20px;
-  transition: 250ms;
   background-color: #af161e;
+  cursor: pointer;
 }
 
 #headerText {
