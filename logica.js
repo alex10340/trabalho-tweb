@@ -32,8 +32,18 @@ const cidade = document.querySelector('#cidade')
 const codigoPostal = document.querySelector('#codigoPostal')
 const pais = document.querySelector('#pais')
 const donationBox = document.querySelector('#donationBox')
+const metodos = document.querySelector('#metodos')
 const errorBox = document.querySelector('#errorBox')
-
+const metodosSelect = document.querySelector('#metodosSelect')
+const metodosInput = document.querySelector('#metodosInput')
+const metodoCartao = document.querySelector('#metodoCartao')
+const metodoPaypal = document.querySelector('#metodoPaypal')
+const metodoMB = document.querySelector('#metodoMB')
+const metodoMBWAY = document.querySelector('#metodoMBWAY')
+const metodoDebito = document.querySelector('#metodoDebito')
+const nextButton = document.querySelector('#nextButton')
+const montante = document.querySelector('#montante')
+const obrigado = document.querySelector('#obrigado')
 
 
 doacaoUnica.checked=false
@@ -41,6 +51,13 @@ doacaoMensal.checked=false
 particular.checked=false
 empresa.checked=false
 customAmountInput.value=''
+metodoCartao.style.display='none'
+metodoPaypal.style.display='none'
+metodoMB.style.display='none'
+metodoMBWAY.style.display='none'
+metodoDebito.style.display='none'
+obrigado.style.display='none'
+
 
 
 donateButton.addEventListener('click', function(){
@@ -219,18 +236,18 @@ seguinte.addEventListener('click',function(){
       else if(nif.value==''){
         errorBox.innerHTML='NIF inválido!'
       }
-      else if(morada.style.display=='flex'){
-        if(rua.value==''){
-          errorBox.innerHTML='Rua inválida!'
-        }
-        if(cidade.value==''){
-          errorBox.innerHTML='Cidade inválida!'
+      else if(morada.style.display=='flex' && ((pais.value=='') || (codigoPostal.value=='') || (cidade.value=='') || (rua.value==''))){
+        if(pais.value==''){
+          errorBox.innerHTML='País inválido!'
         }
         if(codigoPostal.value==''){
           errorBox.innerHTML='Código postal inválido!'
         }
-        if(pais.value==''){
-          errorBox.innerHTML='País inválido!'
+        if(cidade.value==''){
+          errorBox.innerHTML='Cidade inválida!'
+        }
+        if(rua.value==''){
+          errorBox.innerHTML='Rua inválida!'
         }
       }    
       else{
@@ -241,16 +258,124 @@ seguinte.addEventListener('click',function(){
         particularEmpresa.style.display='none'
         particularEmpresaText.style.display='none'
         informacoes.style.display='none'
-        
+
         donationBox.style.display='flex'
+        metodos.style.display='block'
 
-        let numRefeicoes = Math.trunc(quantia / precoRefeicao)
-        console.log(Math.trunc(numRefeicoes))
+        seguinte.style.fontWeight='900'
 
-        if(tipoDoacaoSelect=='unica'){
-          donationBox.innerHTML='O seu donativo permitirá fornecer aproximadamente ' + numRefeicoes +' refeições'
+        if (tipoDoacaoSelect == 'unica'){
+          seguinte.textContent='Doar ' + quantia +' €'
         }
         
+        if (tipoDoacaoSelect == 'mensal'){
+          seguinte.textContent='Doar ' + quantia +' € / mês'
+        }
+
+        let numRefeicoes = quantia / precoRefeicao
+        console.log(numRefeicoes)
+
+        let alimentarDiariamente = numRefeicoes / 2
+
+        let alimentarMes = alimentarDiariamente / 30
+
+
+        if(tipoDoacaoSelect=='unica' && quantia < 40){
+          donationBox.innerHTML='O seu donativo permitirá fornecer aproximadamente ' + Math.trunc(numRefeicoes) +' refeições'
+        }
+        if(tipoDoacaoSelect=='unica' && quantia >= 40){
+          donationBox.innerHTML='O seu donativo permitirá alimentar diariamente ' + Math.trunc(alimentarDiariamente) +' pessoas'
+        }
+        if(tipoDoacaoSelect=='mensal' && quantia <= 90){
+          donationBox.innerHTML='O seu donativo permitirá alimentar uma pessoa durante ' + Math.trunc(alimentarDiariamente) +' dias'
+        }
+        if(tipoDoacaoSelect=='mensal' && quantia > 90){
+          donationBox.innerHTML='O seu donativo permitirá alimentar ' + Math.trunc(alimentarMes) +' pessoa(s) durante este mês'
+        }
+
+        if (tipoDoacaoSelect=='unica'){
+          metodosSelect.querySelector('[value=debito]').remove()
+        }
+
+        if (tipoDoacaoSelect=='mensal'){
+          metodosSelect.querySelector('[value=paypal]').remove()
+          metodosSelect.querySelector('[value=mb]').remove()
+          metodosSelect.querySelector('[value=mbway]').remove()
+        }
+        
+        metodosSelect.value='cartao'
+        metodoCartao.style.display='flex'
+
+        metodosSelect.addEventListener('change', function(){
+          
+          console.log(metodosSelect.value)
+
+          if(metodosSelect.value=='cartao'){
+            metodoCartao.style.display='flex'
+            metodoPaypal.style.display='none'
+            metodoMB.style.display='none'
+            metodoMBWAY.style.display='none'
+            metodoDebito.style.display='none'
+
+            nextButton.style.display='flex'
+            obrigado.style.display='none'
+          }
+          if(metodosSelect.value=='paypal'){
+            metodoPaypal.style.display='flex'
+            metodoCartao.style.display='none'
+            metodoMB.style.display='none'
+            metodoMBWAY.style.display='none'
+
+            nextButton.style.display='flex'
+            obrigado.style.display='none'
+          }
+          if(metodosSelect.value=='mb'){
+            montante.innerHTML='Montante: ' + quantia + '€'
+            metodoMB.style.display='flex'
+            metodoCartao.style.display='none'
+            metodoPaypal.style.display='none'
+            metodoMBWAY.style.display='none'
+
+            nextButton.style.display='none'
+            obrigado.style.display='block'
+
+          }
+          if(metodosSelect.value=='mbway'){
+            metodoMBWAY.style.display='flex'
+            metodoMB.style.display='none'
+            metodoCartao.style.display='none'
+            metodoPaypal.style.display='none'
+
+            nextButton.style.display='flex'
+            obrigado.style.display='none'
+
+          }
+
+          if(metodosSelect.value=='debito'){
+            metodoCartao.style.display='none'
+            metodoDebito.style.display='flex'
+
+
+          }
+
+        })
+
+        seguinte.addEventListener('click',function(){
+          metodosInput.style.display='none'
+          metodos.style.display='none'
+          seguinte.innerHTML='Fechar'
+          donationBox.style.display='none'
+          obrigado.style.display='block'
+          obrigado.style.paddingTop='30px'
+
+          seguinte.addEventListener('click',function(){
+            overlay.style.display='none'
+            paymentDisplay.style.display='none'
+            location.reload()
+            
+          })
+        })
+
       }
     })
 

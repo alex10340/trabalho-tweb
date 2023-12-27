@@ -57,8 +57,40 @@
                 </select>
             </div>
         </div>
-        <div id="errorBox"></div>
+        <div id="metodos">
+            <label for="metodosSelect">Método de pagamento</label>
+            <select name="metodosSelect" id="metodosSelect">
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="mb">Multibanco</option>
+                <option value="mbway">MB WAY</option>
+                <option value="debito">Débito Direto</option>
+            </select>
+        </div>
+        <div id="metodosInput">
+            <div id="metodoCartao">
+                <input id="numcartao" type="text" maxlength="19" placeholder="Número do cartão">
+                <input id="MMYY" type="text" maxlength="4" placeholder="Mês/ano">
+                <input id="CVV" type="text" maxlength="3" placeholder="CVV">
+            </div>
+            <div id="metodoPaypal">
+                <input type="text" placeholder="Email PayPal">
+            </div>
+            <div id="metodoMB">
+                <div>Entidade: 1234</div>
+                <div>Referência: 123456789</div>
+                <span id="montante">Montante:</span>
+            </div>
+            <div id="metodoMBWAY">
+                <input type="text" placeholder="Número de telefone">
+            </div>
+            <div id="metodoDebito">
+                <input type="text" placeholder="IBAN">
+            </div>
+        </div>
         <div id="donationBox"></div>
+        <div id="obrigado">Obrigado! <img src="media/heart.svg"></div>
+        <div id="errorBox"></div>
         <div id="nextButton"><button id="seguinte">Seguinte <img id="arrow-right" src="media/arrow-right.svg"></button></div>
     </div>
     <header class="fixed">

@@ -705,6 +705,17 @@ footer{
   }
 }
 
+#metodosInput div{
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  flex-direction: column;
+
+  input, select{
+    margin: 15px;
+  }
+}
+
 #morada{
   display: none; // flex
   justify-content: center;
@@ -718,10 +729,19 @@ footer{
 }
 
 #destino{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   text-align: center;
+}
+
+#metodos{
+  display: none;
+  background-color: white;
+  text-align: center;
+  padding-top: 10px;
+
+  select{
+    margin: 15px;
+  }
 }
 
 #seguinte {
@@ -758,12 +778,39 @@ footer{
 
 #donationBox{
   display: none;
-  justify-content: center;
   background-color: white;
   text-align: center;
   color: #af161e;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 900;
   padding: 30px;
   padding-bottom: 10px;
+
+  span{
+    font-weight: 900;
+  }
+}
+
+#metodoMB div, #metodoMB span{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+#obrigado{
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  padding: 15px;
+  padding-bottom: 30px;
+  background-color: white;
+  color:#af161e;
+}
+
+#obrigado img{
+  width: 14px;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(82%) saturate(7359%) hue-rotate(359deg) brightness(64%) contrast(120%);
+
 }
