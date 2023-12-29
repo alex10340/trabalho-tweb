@@ -382,5 +382,3 @@ seguinte.addEventListener('click',function(){
   }
 
 })
-
-
