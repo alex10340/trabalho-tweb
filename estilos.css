@@ -779,7 +779,7 @@ footer li {
   filter: brightness(0) saturate(100%) invert(20%) sepia(82%) saturate(7359%) hue-rotate(359deg) brightness(64%) contrast(120%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .menu {
     position: absolute;
     top: 50px;
@@ -793,11 +793,8 @@ footer li {
   .menu-icon {
     display: block;
   }
-  .body {
-    color: red;
-  }
 }
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 400px) {
   header {
     flex-direction: column;
     align-items: stretch;
