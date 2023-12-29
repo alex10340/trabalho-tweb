@@ -240,6 +240,16 @@
     </footer>
 
     <script type="text/javascript" src="logica.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const menuIcon = document.querySelector('.menu-icon');
+          const menu = document.querySelector('.menu');
+      
+          menuIcon.addEventListener('click', function () {
+            menu.classList.toggle('show-menu');
+          });
+        });
+      </script>
 </body>
 
 </html>
