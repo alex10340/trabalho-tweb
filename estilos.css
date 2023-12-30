@@ -106,7 +106,7 @@ header {
   padding: 0;
 }
 
-#nav-links li {
+#nav-links li, #nav-links2 li {
   margin-left: 15px;
   font-weight: 900;
   font-size: 17px;
@@ -116,10 +116,18 @@ header {
   transition: 250ms;
 }
 
-#nav-links li:hover {
+#nav-links li:hover, #nav-links2 li:hover {
   color: #af161e;
   transition: 250ms;
   cursor: pointer;
+}
+
+#nav-links2 {
+  display: none;
+  text-align: center;
+  padding-top: 55px;
+  padding-bottom: 10px;
+  padding-left: 0px;
 }
 
 #search {
@@ -128,7 +136,7 @@ header {
   padding-left: 10px;
 }
 
-#menu {
+#menu, #menu2 {
   height: auto;
   width: 24px;
   padding: 5px;
@@ -136,11 +144,15 @@ header {
   margin: auto;
 }
 
-#search, #menu {
+#search, #menu, #menu2 {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+#menu {
+  display: none;
 }
 
 .data {
@@ -810,6 +822,12 @@ footer li {
   }
 }
 @media (max-width: 900px) {
+  #menu {
+    display: flex;
+  }
+  #menu2 {
+    display: none;
+  }
   #nav-links {
     display: none;
   }

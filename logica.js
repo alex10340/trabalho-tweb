@@ -59,6 +59,14 @@ metodoMBWAY.style.display='none'
 metodoDebito.style.display='none'
 obrigado.style.display='none'
 
+document.getElementById('menu').addEventListener('click', function() {
+  var navlinks2 = document.getElementById('nav-links2')
+  if (navlinks2.style.display === 'block') {
+    navlinks2.style.display = 'none';
+  } else {
+    navlinks2.style.display = 'block';
+  }
+})
 
 
 donateButton.addEventListener('click', function(){
@@ -389,12 +397,4 @@ seguinte.addEventListener('click',function(){
 
 })
 
-document.getElementById('menu').addEventListener('click', function() {
-  var navLinks = document.getElementById('nav-links')
-  if (navLinks.classList.contains('show-menu')) {
-    navLinks.classList.remove('show-menu')
-  } else {
-    navLinks.classList.add('show-menu')
-  }
-})
 

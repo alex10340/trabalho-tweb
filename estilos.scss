@@ -112,7 +112,7 @@ header{
   padding: 0;
 }
 
-#nav-links li {
+#nav-links li, #nav-links2 li {
   margin-left: 15px;  
   font-weight: 900;
   font-size: 17px;
@@ -122,10 +122,18 @@ header{
   transition: $fast;
 }
 
-#nav-links li:hover {
+#nav-links li:hover, #nav-links2 li:hover {
   color: #af161e;
   transition: $fast;
   cursor: pointer;
+}
+
+#nav-links2{
+  display: none;
+  text-align: center;
+  padding-top: 55px;
+  padding-bottom: 10px;
+  padding-left: 0px;
 }
 
 #search{
@@ -134,7 +142,7 @@ header{
   padding-left: 10px;
 }
 
-#menu{
+#menu, #menu2{
   height: auto;
   width: 24px;
   padding: 5px;
@@ -142,11 +150,15 @@ header{
   margin: auto;
 }
 
-#search, #menu {
+#search, #menu, #menu2 {
   display: flex;
   align-items: center;
   justify-content: center; 
   cursor: pointer;
+}
+
+#menu{
+  display: none;
 }
 
 .data{
@@ -822,56 +834,6 @@ footer{
   filter: brightness(0) saturate(100%) invert(20%) sepia(82%) saturate(7359%) hue-rotate(359deg) brightness(64%) contrast(120%);
 
 }
-// @media only screen and (min-width: 400px) and (max-width: 700px) {
-//   .menu {
-//     position: absolute;
-//     top: 50px;
-//     left: 0;
-//     width: 100%;
-//     background-color: #fff;
-//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-//     z-index: 999;
-//     display: block; 
-//   }
-
-  
-//   .menu-icon {
-//     display: block; 
-//   }
-// }
-// @media only screen and (min-width: 200px) and (max-width: 399px) {
-  
-//   header {
-//     flex-direction: column;
-//     align-items: stretch;
-//   }
-
-//   #nav-links {
-//     display: none;
-//     flex-direction: column;
-//     align-items: stretch;
-//     position: absolute;
-//     top: 70px;
-//     left: 0;
-//     background-color: white;
-//     width: 200px;
-//     z-index: 999;
-//   }
-
-//   #nav-links.show-menu {
-//     display: flex;
-//   }
-
-//   #nav-links li {
-//     margin-left: 0;
-//     padding: 15px;
-//     text-align: center;
-//   }
-
-//   #menu {
-//     display: block;
-//   }
-// }
 
 #viewAllNews{
   font-size: 1.25rem;
@@ -900,6 +862,15 @@ footer{
 }
 
 @media (max-width: 900px){
+
+  #menu{
+    display: flex;
+  }
+
+  #menu2{
+    display: none;
+  }
+
   #nav-links{
     display: none;
   }
