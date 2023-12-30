@@ -63,8 +63,10 @@ document.getElementById('menu').addEventListener('click', function() {
   var navlinks2 = document.getElementById('nav-links2')
   if (navlinks2.style.display === 'block') {
     navlinks2.style.display = 'none';
+    document.getElementById('dots').style.top='580.5px'
   } else {
     navlinks2.style.display = 'block';
+    document.getElementById('dots').style.top='748.45px'
   }
 })
 
