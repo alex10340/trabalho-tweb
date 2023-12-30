@@ -2,6 +2,7 @@ const precoRefeicao = 1.5
 
 const overlay = document.querySelector('#overlay')
 const donateButton = document.querySelector('#donateButton')
+const donateButton2 = document.querySelector('#donateButton2')
 const paymentDisplay = document.querySelector('#paymentDisplay')
 const paymentDisplayTitle = document.querySelector('#paymentDisplayTitle')
 const paymentDisplayClose = document.querySelector('#paymentDisplayClose')
@@ -61,6 +62,11 @@ obrigado.style.display='none'
 
 
 donateButton.addEventListener('click', function(){
+  overlay.style.display='block'
+  paymentDisplay.style.display='block'
+})
+
+donateButton2.addEventListener('click', function(){
   overlay.style.display='block'
   paymentDisplay.style.display='block'
 })

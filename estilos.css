@@ -59,7 +59,7 @@ header {
   flex-direction: row;
 }
 
-#donateButton {
+#donateButton, #donateButton2 {
   display: flex;
   align-items: center;
   color: white;
@@ -70,17 +70,17 @@ header {
   transition: 250ms;
   background-color: #af161e;
 }
-#donateButton .heart-icon {
+#donateButton .heart-icon, #donateButton2 .heart-icon {
   transform: scale(1);
   transition: 250ms;
 }
 
-#donateButton:hover {
+#donateButton:hover, #donateButton2:hover {
   transition: 250ms;
   background-color: #fc2b32;
   cursor: pointer;
 }
-#donateButton:hover .heart-icon {
+#donateButton:hover .heart-icon, #donateButton2:hover .heart-icon {
   transform: scale(1.2);
   transition: 250ms;
 }
@@ -89,6 +89,13 @@ header {
   width: 16px;
   margin-right: 5px;
   filter: invert(100%);
+}
+
+#donateButton2 {
+  display: none;
+  margin-top: 30px;
+  width: 100%;
+  justify-content: center;
 }
 
 #nav-links {
@@ -814,6 +821,19 @@ footer li {
   .read-img img {
     height: 20rem;
   }
+  #donateButton2 {
+    display: flex;
+    position: fixed;
+    top: auto;
+    bottom: 0px;
+    padding: 30px;
+    border-radius: 0;
+  }
+  footer {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-bottom: 10px;
+  }
 }
 @media (max-width: 800px) {
   .drc {
@@ -847,5 +867,14 @@ footer li {
   }
   #viewAllNews {
     display: none;
+  }
+  #customAmount {
+    padding: 30px 15px;
+  }
+  #customAmount input {
+    font-size: 16px;
+  }
+  #presets button {
+    padding: 15px 30px;
   }
 }/*# sourceMappingURL=estilos.css.map */
